@@ -1,0 +1,29 @@
+{
+  "name": "@caizih/sdkmonitor",
+  "version": "1.0.1",
+  "private":false,
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "dev": "rollup -c --bundleConfigAsCjs",
+    "dev:prod": "rollup -c --bundleConfigAsCjs && uglifyjs dist/index.cjs.js -c -m -o  dist/index.cjs.js && uglifyjs dist/index.esm.js -c -m -o dist/index.esm.js && uglifyjs dist/index.js -c -m -o dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 9528"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "轻量级前段埋点sdk"
+  ],
+  "author": "czh",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup":"^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.5"
+  }
+}
